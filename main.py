@@ -40,7 +40,7 @@ def build_model(input_shape, num_classes):
 # Parametry
 image_size = (150, 150)
 num_classes = 10
-data_directory = 'local_data'
+data_directory = 'dane'
 
 # Załadowanie danych z lokalnego folderu
 images, labels = load_data_from_directory(data_directory, image_size)
