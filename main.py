@@ -42,10 +42,9 @@ num_classes = 10
 data_directory = 'data_directory'
 new_data_directory = 'new_data_directory'  # Nowe dane testowe
 
-# Załadowanie danych z lokalnego folderu
+
 images, labels = load_data_from_directory(data_directory, image_size)
 
-# Budowa modelu
 model = build_model(input_shape=(image_size[0], image_size[1], 3), num_classes=num_classes)
 
 # Trenowanie modelu na danych treningowych
