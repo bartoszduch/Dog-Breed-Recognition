@@ -3,7 +3,6 @@ import os
 from bs4 import BeautifulSoup
 
 
-# Funkcja do pobierania obrazów i zapisywania ich do plików
 def download_images_from_page(url, save_directory, max_images=20):
     response = requests.get(url)
     if response.status_code == 200:
@@ -23,15 +22,11 @@ def download_images_from_page(url, save_directory, max_images=20):
         print('Błąd podczas pobierania strony')
 
 
-# Adres URL strony zawierającej obrazy
 page_url = 'https://www.pexels.com/pl-pl/szukaj/owczarek%20niemiecki/'
 
-# Katalog docelowy, gdzie zostaną zapisane obrazy
 save_directory = 'new_data_directory'
 
-# Sprawdź, czy katalog docelowy istnieje, jeśli nie, utwórz go
 if not os.path.exists(save_directory):
     os.makedirs(save_directory)
 
-# Pobierz i zapisz obrazy z pierwszych 20 adresów URL
 download_images_from_page(page_url, save_directory, max_images=20)
