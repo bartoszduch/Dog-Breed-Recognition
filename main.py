@@ -41,6 +41,7 @@ def build_model(input_shape, num_classes):
 image_size = (150, 150)
 num_classes = 10
 data_directory = 'dane'
+new_data_directory = 'new_data_directory'  # Folder z nowymi danymi testowymi
 
 # Załadowanie danych z lokalnego folderu
 images, labels = load_data_from_directory(data_directory, image_size)
@@ -48,14 +49,13 @@ images, labels = load_data_from_directory(data_directory, image_size)
 # Budowa modelu
 model = build_model(input_shape=(image_size[0], image_size[1], 3), num_classes=num_classes)
 
-# Trenowanie modelu
+# Trenowanie modelu na danych treningowych
 model.fit(images, labels, epochs=10, validation_split=0.2)
 
-# Testowanie modelu na nowych danych
-# (możesz użyć load_data_from_directory do wczytania nowych danych testowych)
+# Załaduj nowe dane testowe z folderu z pobranymi obrazami
 new_images, new_labels = load_data_from_directory(new_data_directory, image_size)
 
-# Ocen model na nowych danych testowych
+# Oceń model na nowych danych testowych
 loss, accuracy = model.evaluate(new_images, new_labels)
 
 print("Błąd:", loss)
