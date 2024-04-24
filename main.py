@@ -50,7 +50,7 @@ model = build_model(input_shape=(image_size[0], image_size[1], 3), num_classes=n
 # Trenowanie modelu na danych treningowych
 model.fit(images, labels, epochs=10, validation_split=0.2)
 
-# Załaduj nowe dane testowe z folderu z pobranymi obrazami
+
 new_images, new_labels = load_data_from_directory(new_data_directory, image_size)
 
 # Oceń model na nowych danych testowych
