@@ -55,4 +55,4 @@ new_images, new_labels = load_data_from_directory(new_data_directory, image_size
 
 loss, accuracy = model.evaluate(new_images, new_labels)
 print("Loss:", loss)
-print("Dokładność:", accuracy)
+print("Accuracy:", accuracy)
