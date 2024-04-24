@@ -19,7 +19,6 @@ def load_data_from_directory(directory, image_size):
                 labels.append(label)
     return np.array(images), np.array(labels)
 
-# Definicja modelu CNN
 def build_model(input_shape, num_classes):
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
