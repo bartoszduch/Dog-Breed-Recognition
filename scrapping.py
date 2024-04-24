@@ -24,7 +24,7 @@ def download_images_from_page(url, save_directory, max_images=20):
 
 
 # Adres URL strony zawierającej obrazy
-page_url = 'https://www.gettyimages.com/photos/german-shepherd'
+page_url = 'https://pl.freepik.com/darmowe-zdjecie-wektory/owczarek-niemiecki'
 
 # Katalog docelowy, gdzie zostaną zapisane obrazy
 save_directory = 'new_data_directory'
