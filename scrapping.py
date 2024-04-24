@@ -24,10 +24,10 @@ def download_images_from_page(url, save_directory, max_images=20):
 
 
 # Adres URL strony zawierającej obrazy
-page_url = 'https://www.shutterstock.com/search/labrador'
+page_url = 'https://www.gettyimages.com/photos/german-shepherd'
 
 # Katalog docelowy, gdzie zostaną zapisane obrazy
-save_directory = 'German Shepherd'
+save_directory = 'new_data_directory'
 
 # Sprawdź, czy katalog docelowy istnieje, jeśli nie, utwórz go
 if not os.path.exists(save_directory):

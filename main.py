@@ -53,3 +53,10 @@ model.fit(images, labels, epochs=10, validation_split=0.2)
 
 # Testowanie modelu na nowych danych
 # (możesz użyć load_data_from_directory do wczytania nowych danych testowych)
+new_images, new_labels = load_data_from_directory(new_data_directory, image_size)
+
+# Ocen model na nowych danych testowych
+loss, accuracy = model.evaluate(new_images, new_labels)
+
+print("Błąd:", loss)
+print("Dokładność:", accuracy)
