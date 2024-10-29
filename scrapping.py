@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def download_images_from_page(url, save_directory, max_images=20):
     response = requests.get(url)
-    if response.status_code == 200:
+    if response.status_code==200:
         soup = BeautifulSoup(response.content, 'html.parser')
         image_tags = soup.find_all('img')
         image_urls = [tag['src'] for tag in image_tags if 'src' in tag.attrs][:max_images]
