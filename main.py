@@ -46,7 +46,6 @@ images, labels = load_data_from_directory(data_directory, image_size)
 
 model = build_model(input_shape=(image_size[0], image_size[1], 3), num_classes=num_classes)
 
-# Trenowanie modelu na danych treningowych
 model.fit(images, labels, epochs=10, validation_split=0.2)
 
 
