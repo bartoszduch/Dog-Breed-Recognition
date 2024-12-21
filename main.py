@@ -36,7 +36,6 @@ def build_model(input_shape, num_classes):
                   metrics=['accuracy'])
     return model
 
-# Parametry
 image_size = (150, 150)
 num_classes = 10
 data_directory = 'data_directory'
