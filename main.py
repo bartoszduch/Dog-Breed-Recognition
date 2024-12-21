@@ -42,6 +42,7 @@ data_directory = 'data_directory'
 new_data_directory = 'new_data_directory'  # Nowe dane testowe
 
 
+# Trenowanie modelu na danych treningowych
 images, labels = load_data_from_directory(data_directory, image_size)
 
 model = build_model(input_shape=(image_size[0], image_size[1], 3), num_classes=num_classes)
